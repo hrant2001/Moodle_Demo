@@ -5,28 +5,24 @@ public class Student {
     private int id;
     private String firstName;
     private String lastName;
-    private char sex;
     private double averageYearGrade;
-
+    private String sex;
 
     //Constructors
     public Student(){
-
+        this.id = 0;
+        this.firstName = "";
+        this.lastName = "";
+        this.sex = "Male";
+        this.averageYearGrade = 10;
     }
 
-    public Student(String firstName, String lastName, char sex, double averageYearGrade) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.sex = sex;
-        this.averageYearGrade = averageYearGrade;
-    }
-
-    public Student(int id, String firstName, String lastName, char sex, double averageYearGrade) {
+    public Student(int id, String firstName, String lastName, double averageYearGrade, String sex) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.sex = sex;
         this.averageYearGrade = averageYearGrade;
+        this.sex = sex;
     }
 
     //Getters and setters
@@ -54,14 +50,6 @@ public class Student {
         this.lastName = lastName;
     }
 
-    public char getSex() {
-        return sex;
-    }
-
-    public void setSex(char sex) {
-        this.sex = sex;
-    }
-
     public double getAverageYearGrade() {
         return averageYearGrade;
     }
@@ -70,10 +58,18 @@ public class Student {
         this.averageYearGrade = averageYearGrade;
     }
 
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
     //toString()
     @Override
     public String toString() {
         return getClass().getSimpleName() + "First Name: " + firstName
-                + ", Last Name: " + lastName;
+                + ", Last Name: " + lastName + ", Average: " + averageYearGrade + ", Sex: " + sex;
     }
 }

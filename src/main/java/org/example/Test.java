@@ -13,6 +13,9 @@ public class Test {
 
     public static void main(String[] args) {
 
+        Student hrant = new Student(1, "Hrant",
+                "Arakelyan", 17.99,"Male");
+
         Connection connection;
         PreparedStatement preparedStatement;
 
@@ -30,17 +33,17 @@ public class Test {
                 String sex = resultSet.getString(5);
 
                 System.out.println("Id: " + id +
-                        ", first name: " + first_Name +
-                        ", last name: " + last_Name +
-                        ", average grade: " + average_Grade +
-                        ", sex: " + sex);
+                        ", First Name: " + first_Name
+                        + ", Last Name: " + last_Name +
+                        ", Average: " + average_Grade +
+                        ", Sex: " + sex);
             }
 
-//           preparedStatement.setInt(1,2);
-//           preparedStatement.setString(2,"Argisht");
-//           preparedStatement.setString(3,"Tigranyan");
-//           preparedStatement.setDouble(4,23.33);
-//           preparedStatement.setString(5,"Male");
+//           preparedStatement.setInt(1,hrant.getId());
+//           preparedStatement.setString(2, hrant.getFirstName());
+//           preparedStatement.setString(3, hrant.getLastName());
+//           preparedStatement.setDouble(4,hrant.getAverageYearGrade());
+//           preparedStatement.setString(5, hrant.getSex());
 
            preparedStatement.execute();
 
