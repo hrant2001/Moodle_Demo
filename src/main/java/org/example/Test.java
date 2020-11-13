@@ -7,8 +7,8 @@ public class Test {
     private static final String HOST_URL = "jdbc:postgresql://localhost:5432/moodle";
     private static final String USERNAME = "postgres";
     private static final String PASSWORD = "dbp2020wesh";
-    private static final String INSERT_NEW = "INSERT INTO list VALUES(?,?,?,?,?)";
-    private static final String GET_ALL = "SELECT * FROM list";
+    private static final String INSERT_NEW = "INSERT INTO infodesk VALUES(?,?,?,?,?)";
+    private static final String GET_ALL = "SELECT * FROM infodesk";
 
 
     public static void main(String[] args) {
@@ -36,12 +36,12 @@ public class Test {
                         ", sex: " + sex);
             }
 
-           /*preparedStatement.setInt(1,2);
-           preparedStatement.setString(2,"Argisht");
-           preparedStatement.setString(3,"Tigranyan");
-           preparedStatement.setDouble(4,23.33);
-           preparedStatement.setString(5,"M");
-*/
+//           preparedStatement.setInt(1,2);
+//           preparedStatement.setString(2,"Argisht");
+//           preparedStatement.setString(3,"Tigranyan");
+//           preparedStatement.setDouble(4,23.33);
+//           preparedStatement.setString(5,"Male");
+
            preparedStatement.execute();
 
            connection.close();
